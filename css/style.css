@@ -1,0 +1,256 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(/bg-img/bg-img.jpg) no-repeat;
+  background-size: contain;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Default */
+
+/* Header Start */
+
+header {
+  padding: 30px 0;
+}
+
+header .navs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .navs .links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header .navs .links a {
+  font-size: 13px;
+  color: #313131;
+  text-decoration: none;
+}
+
+header .navs .links a:hover {
+  color: #109fad;
+}
+
+header .navs .links a:last-child {
+  border: 2px solid #109fad;
+  border-radius: 10px;
+  padding: 5px 30px;
+}
+
+/* Header End */
+
+/* Banner Start */
+
+.banner {
+  padding: 80px 0;
+}
+
+.banner .banner-parent > div:last-child img {
+  width: 100%;
+}
+
+.banner .banner-parent {
+  display: flex;
+  /* justify-content: space-between; */
+  /* gap: 100px; */
+}
+
+.banner .banner-parent .content > span {
+  color: #109fad;
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: block;
+}
+.banner .banner-parent .content h1 > span {
+  margin: 5px 0;
+  color: #313131;
+  font-weight: 600;
+}
+
+.banner .banner-parent .content p {
+  color: #888888;
+  font-size: 16px;
+  line-height: 2;
+}
+.banner .banner-parent .content > div {
+  /* padding: 20px; */
+  display: inline-flex;
+  width: 100%;
+  margin: 30px 0;
+}
+.banner .banner-parent .content > div input {
+  border: 1px solid #ffffff;
+  outline: none;
+  width: 80%;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.banner .banner-parent .content > div a {
+  padding: 20px 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  width: 30%;
+  color: #ffffff;
+  background-color: #109fad;
+  text-decoration: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.banner .banner-parent .content > div input::placeholder {
+  color: #c0c0c0;
+}
+
+.banner .content > h6 {
+  font-size: 16px;
+  color: #888888;
+}
+
+.banner .content > h6 span {
+  color: #109fad;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.banner .content > h6 span:first-child {
+  margin-left: 0;
+}
+
+/* Banner End */
+
+/* The jobs Start */
+
+.the-jobs .job-header span {
+  display: block;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+}
+
+.the-jobs .job-header h1 {
+  font-size: 50px;
+  text-align: center;
+  color: #000000;
+  margin: 20px 0;
+}
+
+.the-jobs .job-boxs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.the-jobs .job-boxs > div {
+  border-radius: 10px;
+}
+
+.the-jobs .job-boxs div > img {
+  /* min-width: 100%;
+  min-height: 100%; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /* overflow: hidden; */
+  object-fit: cover;
+}
+
+/* The jobs End */
+
+/* Footer Start */
+footer {
+  margin-top: 50px;
+  padding: 30px 0;
+  text-align: center;
+  background-color: #c0c0c0;
+  color: #109fad;
+}
+/* Footer End */
+
+/* Responsive Start */
+
+/* Desktop */
+@media only screen and (min-width: 1200px), (min-width: 1440px) {
+  header .navs .links a {
+    font-size: 16px;
+  }
+
+  .banner .banner-parent .content h1 > span {
+    display: block;
+    font-size: 50px;
+  }
+
+  .banner .banner-parent > div {
+    width: 50%;
+  }
+}
+
+/* Tab */
+@media only screen and (max-width: 992px) {
+  header .navs,
+  .banner .banner-parent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .banner .content {
+    text-align: center;
+  }
+
+  .the-jobs .job-boxs > div:first-child,
+  .the-jobs .job-boxs > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    /* gap: 20px; */
+    /* background-color: red; */
+  }
+
+  .the-jobs .job-boxs > div:last-child {
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    width: 100%;
+  }
+
+  .banner {
+    padding: 40px 0;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  header .navs .links a:last-child {
+    padding: 2px 10px;
+  }
+  .the-jobs .job-boxs {
+    flex-direction: column;
+  }
+
+  .banner {
+    padding: 0;
+  }
+}
+/* Responsive End */
